@@ -1,0 +1,27 @@
+<?php
+class Movie {
+    public $title;
+    public $director;
+    public $releaseYear;
+    public $genre;
+    public $rating;
+
+    public function setMovie($title, $director, $releaseYear, $genre, $rating) {
+        $this->title = $title;
+        $this->director = $director;
+        $this->releaseYear = $releaseYear;
+        $this->genre = $genre;
+        $this->rating = $rating;
+    }
+
+        public function getMovieInfo() {
+        return "The movie title is {$this->title}, directed by {$this->director}, released in {$this->releaseYear}. It belongs to the {$this->genre} genre and has a rating of {$this->rating}.";
+    }
+}
+
+$movie = new Movie();
+
+$movie->setMovie("Avengers Endgame", "Anthony and Joe Russo", 2019, "Action/Sci-Fi", 8.4);
+
+echo $movie->getMovieInfo();
+?>
